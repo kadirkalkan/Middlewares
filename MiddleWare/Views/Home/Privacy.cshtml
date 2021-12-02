@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.Id != null)
+{
+    <p>Get Request'inde Gelen Data : @ViewBag.Id</p>
+}
+else
+{
+    <p> Welcome To Privacy.</p>
+}
+
+
+<form method="post" asp-controller="Home" asp-action="Privacy" asp-route-id="15">
+    <input type="submit" name="button" value="Gonder" />
+</form>
